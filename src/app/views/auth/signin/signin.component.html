@@ -1,0 +1,31 @@
+<app-header></app-header>
+
+<div class="wrapper">
+
+  <form class="form" [formGroup]="myForm" novalidate>
+
+    <mat-form-field class="form__input" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="email">
+      <mat-error *ngIf="input['email'].touched && input['email'].invalid">
+        <span *ngIf="input['email'].errors">Correo inválido</span>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="form__input form__input--margin-top" appearance="fill">
+      <mat-label>Contraseña</mat-label>
+      <input matInput formControlName="password">
+      <mat-error *ngIf="input['password'].touched && input['password'].invalid">
+        <span *ngIf="input['password'].errors">Contraseña inválida</span>
+      </mat-error>
+    </mat-form-field>
+
+    <button class="btn-access" mat-raised-button color="primary" (click)="login()" [disabled]="myForm.invalid">
+      Entrar
+    </button>
+
+    <app-alert *ngIf="message" [messageAlert]="message" [isError]="isError"></app-alert>
+
+  </form>
+
+</div>

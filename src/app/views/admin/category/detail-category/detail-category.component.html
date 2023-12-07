@@ -1,0 +1,19 @@
+<div class="wrapper">
+
+  <div class="wrapper__content" *ngIf="category">
+    <p class="wrapper__name">{{category.name}}</p>
+    <p class="wrapper__id">{{category.id}}</p>
+    <img class="wrapper__img"  [src]="category.image" alt="img">
+
+    <div class="wrapper__date">
+      <p class="wrapper__date-creation">Fecha de creación</p>
+      <p class="wrapper__date-update wrapper__date-update--margin-bottom"> {{category.creationAt | date:'dd/MM/yyyy'}} </p>
+    </div>
+
+    <div class="wrapper__date">
+      <p class="wrapper__date-creation">Fecha de actualización</p>
+      <p class="wrapper__date-update">{{category.updatedAt | date:'dd/MM/yyyy'}}</p>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,28 @@
+.header
+  display: flex
+  justify-content: space-between
+  height: 5rem
+  align-items: center
+  //background: linear-gradient(90deg, #8dbdb8 0%, #9AADF9 50%, #8dbdb8 100%)
+  background: #6d9fad
+  padding: 0 1rem
+
+  &__title
+    margin: 0
+    font-family: "Playfair Display", serif
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
+    font-size: 26px
+
+.menu
+  display: flex
+
+  &__link
+    font-size: 1rem
+    font-family: "Playfair Display", serif
+    cursor: pointer
+
+    &--margin-right
+      margin-right: 2rem
+
+    &--active
+      border-bottom: 0.24rem solid #fb6900

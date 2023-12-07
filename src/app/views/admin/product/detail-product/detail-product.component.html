@@ -1,0 +1,25 @@
+<div class="wrapper">
+
+  <div class="wrapper__content" *ngIf="product">
+    <p class="wrapper__title">{{product.title}}</p>
+    <p class="wrapper__price"> Precio: {{product.price}}</p>
+    <p class="wrapper__description">{{product.description}}</p>
+    <p>Categoría: {{ product.category.name }}</p>
+
+    <div class="images-grid">
+      <img class="wrapper__image" *ngFor="let image of product.images" [src]="image" alt="product">
+    </div>
+
+    <div class="wrapper__date">
+      <p class="wrapper__date-creation">Fecha de creación</p>
+      <p class="wrapper__date-update wrapper__date-update--margin-bottom">{{product.creationAt | date:'dd/MM/yyyy'}}</p>
+    </div>
+
+    <div class="wrapper__date">
+      <p class="wrapper__date-creation">Fecha de actualización</p>
+      <p class="wrapper__date-update">{{product.updatedAt | date:'dd/MM/yyyy'}}</p>
+    </div>
+
+  </div>
+
+</div>

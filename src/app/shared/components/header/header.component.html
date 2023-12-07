@@ -1,0 +1,8 @@
+<header class="header">
+  <h1 class="header__title">TIENDA EN LINEA</h1>
+  <div *ngIf="showButtons">
+    <a class="menu__link menu__link--margin-right" mat-stroked-button routerLink="/signin" routerLinkActive="menu__link--active"> Login </a>
+    <a class="menu__link" mat-stroked-button routerLink="/signup" routerLinkActive="menu__link--active"> Registro </a>
+  </div>
+  <button mat-stroked-button routerLink="/signin" *ngIf="btnLogOut">Cerrar sesión</button>
+</header>

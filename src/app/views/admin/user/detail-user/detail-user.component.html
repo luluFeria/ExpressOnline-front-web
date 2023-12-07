@@ -1,0 +1,21 @@
+<div class="wrapper">
+
+  <div class="wrapper__content" *ngIf="user">
+    <p class="wrapper__name wrapper__name--color">{{user.name}}</p>
+    <p class="wrapper__id">{{user.id}}</p>
+    <img class="wrapper__avatar" [src]="user.avatar" alt="img">
+    <p class="wrapper__date">{{user.email}}</p>
+    <p class="wrapper__date">{{user.role}}</p>
+
+    <div class="wrapper__date">
+      <p class="wrapper__date-creation">Fecha de creación</p>
+      <p class="wrapper__date-update wrapper__date-update--margin-bottom">{{user.creationAt | date:'dd/MM/yyyy'}}</p>
+    </div>
+
+    <div class="wrapper__date">
+      <p class="wrapper__date-creation">Fecha de actualización</p>
+      <p class="wrapper__date-update">{{user.updatedAt | date:'dd/MM/yyyy'}}</p>
+    </div>
+  </div>
+
+</div>

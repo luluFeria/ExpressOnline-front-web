@@ -1,0 +1,57 @@
+<h1>{{ id ? "ACTUALIZAR USUARIO" : "AGREGAR USUARIO" }}</h1>
+
+<div class="wrapper">
+
+  <form class="form" [formGroup]="myForm" novalidate>
+
+    <div class="form__content">
+
+      <mat-form-field class="form__input" appearance="fill">
+        <mat-label>Correo</mat-label>
+        <input matInput formControlName="email">
+        <mat-error *ngIf="input['email'].touched && input['email'].invalid">
+          <span *ngIf="input['email'].errors">Correo inválido</span>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form__input" appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="name">
+        <mat-error *ngIf="input['name'].touched && input['name'].invalid">
+          <span *ngIf="input['name'].errors">Nombre inválido</span>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form__input form__input--margin-top" appearance="fill">
+        <mat-label>Contraseña</mat-label>
+        <input matInput formControlName="password">
+        <mat-error *ngIf="input['password'].touched && input['password'].invalid">
+          <span *ngIf="input['password'].errors">Contraseña inválida</span>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form__role">
+        <mat-label>Rol</mat-label>
+        <mat-select disableRipple formControlName="role">
+          <mat-option value="admin">Administrador</mat-option>
+          <mat-option value="customer">Cliente</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="form__input form__input--margin-top" appearance="fill">
+        <mat-label>Avatar</mat-label>
+        <input matInput formControlName="avatar">
+        <mat-error *ngIf="input['avatar'].touched && input['avatar'].invalid">
+          <span *ngIf="input['avatar'].errors">Avatar inválido</span>
+        </mat-error>
+      </mat-form-field>
+
+    </div>
+
+    <button class="btn-access" mat-raised-button color="primary" (click)=" id ? updateUser() : addUser()" [disabled]="myForm.invalid">
+      {{ id ? "Actualizar" : "Agregar" }}
+    </button>
+
+  </form>
+
+</div>
