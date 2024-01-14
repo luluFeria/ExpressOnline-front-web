@@ -15,6 +15,7 @@ export class CategoriesComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'name', 'creationAt', 'updatedAt', 'operation'];
   dataSource = new MatTableDataSource();
+  search: string = '';
 
   @ViewChild(MatPaginator) paginator: MatPaginator | undefined;
 

@@ -16,6 +16,8 @@ import { DetailUserComponent } from './user/detail-user/detail-user.component';
 import { DetailProductComponent } from './product/detail-product/detail-product.component';
 import { EmptyModule } from 'src/app/shared/components/empty/empty.module';
 import { SystemErrorModule } from 'src/app/shared/components/system-error/system-error.module';
+import { FilterCategoryPipe } from 'src/app/shared/pipes/filter-category.pipe';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { SystemErrorModule } from 'src/app/shared/components/system-error/system
     AddProductComponent,
     DetailCategoryComponent,
     DetailUserComponent,
-    DetailProductComponent
+    DetailProductComponent,
+    FilterCategoryPipe
   ],
   imports: [
     AdminRoutingModule,
