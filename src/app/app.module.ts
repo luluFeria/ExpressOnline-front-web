@@ -15,6 +15,7 @@ import { AlertComponent } from './shared/components/alert/alert.component';
 import { ButtonComponent } from './shared/components/button/button.component';
 import { CommonModule } from '@angular/common';
 import { SidenavComponent } from './shared/components/sidenav/sidenav.component';
+import { FilterCategoryPipe } from './shared/pipes/filter-category.pipe';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SidenavComponent } from './shared/components/sidenav/sidenav.component'
     AlertComponent,
     ButtonComponent,
     SidenavComponent,
+    FilterCategoryPipe,
   ],
   imports: [
     CommonModule,
