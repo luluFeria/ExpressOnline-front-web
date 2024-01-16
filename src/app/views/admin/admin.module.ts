@@ -17,7 +17,8 @@ import { DetailProductComponent } from './product/detail-product/detail-product.
 import { EmptyModule } from 'src/app/shared/components/empty/empty.module';
 import { SystemErrorModule } from 'src/app/shared/components/system-error/system-error.module';
 import { FilterCategoryPipe } from 'src/app/shared/pipes/filter-category.pipe';
-
+import { FilterUserPipe } from 'src/app/shared/pipes/filter-user.pipe';
+import { FilterProductPipe } from 'src/app/shared/pipes/filter-product.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,9 @@ import { FilterCategoryPipe } from 'src/app/shared/pipes/filter-category.pipe';
     DetailCategoryComponent,
     DetailUserComponent,
     DetailProductComponent,
-    FilterCategoryPipe
+    FilterCategoryPipe,
+    FilterUserPipe,
+    FilterProductPipe
   ],
   imports: [
     AdminRoutingModule,
