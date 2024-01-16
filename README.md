@@ -16,6 +16,9 @@ Node v16.10.0
 # Generar un servicio
   ng g s ruta/nombreDelServicio
 
+# Generar un pipe
+  ng g p ruta/nombreDelpipe
+
 # Comandoss git
   git pull
   git status  -- para ver el estado del proyecto
