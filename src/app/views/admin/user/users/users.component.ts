@@ -15,6 +15,8 @@ export class UsersComponent implements OnInit {
 
   displayedColumns: string[] = ['id', 'name', 'email', 'role', 'operation'];
   dataSource = new MatTableDataSource();
+  search: string = '';
+
   @ViewChild(MatPaginator) paginator: MatPaginator | undefined;
 
   constructor(

@@ -4,7 +4,13 @@
 <h1>USUARIOS</h1>
 
 <div class="table">
-  <mat-table mat-table [dataSource]="dataSource">
+  <mat-form-field appearance="fill">
+    <mat-label>Buscar</mat-label>
+    <input matInput [(ngModel)]="search" placeholder="User">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+
+  <mat-table mat-table [dataSource]="dataSource.data | filteruser: search">
 
     <ng-container matColumnDef="id">
       <th mat-header-cell class="custom-header-cell" *matHeaderCellDef> ID </th>
