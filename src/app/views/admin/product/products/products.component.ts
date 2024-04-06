@@ -37,11 +37,10 @@ export class ProductsComponent implements OnInit {
 
   getProducts() {
     this.productService.getAll()
-      .subscribe(
-        (response: IProduct[]) => {
-          this.dataSource.data = response;
-        }
-      );
+      .subscribe((response: IProduct[]) => {
+        this.dataSource.data = response;
+      }
+    );
   }
 
   deleteProduct(id: number) {
